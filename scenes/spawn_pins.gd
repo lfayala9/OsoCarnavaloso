@@ -26,4 +26,4 @@ func _spawn_pin():
 		timer.stop()
 
 func _on_pin_pressed(index):
-	print("Pin " + str(index) + " fue presionado")
+	print("Pin " + str(index) + " fue presionado sí")
