@@ -1,7 +1,7 @@
 extends Node2D  # O el nodo principal del mapa
 
 var pin_texture = preload("res://assets/pop_up.png")
-var pin_positions = [Vector2(100, 200), Vector2(300, 400), Vector2(500, 100)]  # Lista de posiciones
+var pin_positions = [Vector2(250, 200), Vector2(300, 250), Vector2(500, 100)]  # Lista de posiciones
 var current_index = 0
 
 @onready var timer = $Timer_pop  # Asegúrate de que hay un Timer en la escena
@@ -13,11 +13,17 @@ func _ready():
 
 func _spawn_pin():
 	if current_index < pin_positions.size():
-		var pin = TextureRect.new()
-		pin.texture = pin_texture
+		var pin = TextureButton.new()
+		pin.texture_normal = pin_texture
 		pin.position = pin_positions[current_index]
-		add_child(pin)
+		pin.scale = Vector2(0.15, 0.15)  # Reducir a la mitad
+
+		pin.pressed.connect(_on_pin_pressed.bind(current_index))  # Conectar evento clic
 		
-		current_index += 1  # Pasar al siguiente pin
+		add_child(pin)
+		current_index += 1
 	else:
-		timer.stop()  # Detener el timer si ya no hay más pins
+		timer.stop()
+
+func _on_pin_pressed(index):
+	print("Pin " + str(index) + " fue presionado")
