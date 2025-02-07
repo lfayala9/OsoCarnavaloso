@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjdqvinex6imh"]
+[gd_scene load_steps=6 format=3 uid="uid://cjdqvinex6imh"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_0lkkt"]
 [ext_resource type="Texture2D" uid="uid://dotfyf8ltngul" path="res://assets/oso.png" id="2_qw0xo"]
 [ext_resource type="Texture2D" uid="uid://chvajl5pnqx4m" path="res://assets/pop_up.png" id="2_rcawi"]
 [ext_resource type="Script" path="res://scripts/example.gd" id="3_grfu2"]
+[ext_resource type="Script" path="res://scenes/TimerBar.gd" id="5_q6lun"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0lkkt")
@@ -11,9 +12,15 @@ metadata/_edit_vertical_guides_ = [2435.0, 2337.0]
 
 [node name="Pop up" type="Sprite2D" parent="."]
 z_index = 10
-position = Vector2(593, 369)
-scale = Vector2(-0.293312, 0.0961701)
+position = Vector2(582.333, 373.333)
+scale = Vector2(-0.167822, 0.125351)
 texture = ExtResource("2_rcawi")
+
+[node name="Button" type="Button" parent="Pop up"]
+offset_left = -76.0
+offset_top = -130.0
+offset_right = 75.0
+offset_bottom = 133.0
 
 [node name="Oso" type="Sprite2D" parent="."]
 position = Vector2(579, 429)
@@ -51,4 +58,23 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 [node name="Timer pop" type="Timer" parent="Control"]
 wait_time = 5.0
 
+[node name="stress" type="Label" parent="."]
+offset_left = 587.0
+offset_top = 486.0
+offset_right = 730.0
+offset_bottom = 521.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="TimerBar" type="Line2D" parent="."]
+position = Vector2(530, 408)
+points = PackedVector2Array(0, 0, 100, 0)
+default_color = Color(0.113725, 1, 0.215686, 1)
+script = ExtResource("5_q6lun")
+
+[node name="barTimer" type="Timer" parent="TimerBar"]
+autostart = true
+
+[connection signal="button_down" from="Pop up/Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Control/Button" to="Control" method="_on_button_button_down"]
+[connection signal="no_time" from="TimerBar" to="." method="_on_timer_bar_no_time"]
+[connection signal="timeout" from="TimerBar/barTimer" to="TimerBar" method="_on_bar_timer_timeout"]

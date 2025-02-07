@@ -1,1 +1,4 @@
 res://scenes/main.tscn
+res://scripts/main.gd
+res://scenes/TimerBar.gd
+res://scripts/example.gd
