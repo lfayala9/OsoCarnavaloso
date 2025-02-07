@@ -1,14 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjdqvinex6imh"]
+[gd_scene load_steps=5 format=3 uid="uid://cjdqvinex6imh"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_0lkkt"]
 [ext_resource type="Texture2D" uid="uid://dotfyf8ltngul" path="res://assets/oso.png" id="2_qw0xo"]
+[ext_resource type="Texture2D" uid="uid://chvajl5pnqx4m" path="res://assets/pop_up.png" id="2_rcawi"]
 [ext_resource type="Script" path="res://scripts/example.gd" id="3_grfu2"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0lkkt")
+metadata/_edit_vertical_guides_ = [2435.0, 2337.0]
+
+[node name="Pop up" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(593, 369)
+scale = Vector2(-0.293312, 0.0961701)
+texture = ExtResource("2_rcawi")
 
 [node name="Oso" type="Sprite2D" parent="."]
-position = Vector2(577, 431)
+position = Vector2(579, 429)
 texture = ExtResource("2_qw0xo")
 
 [node name="Control" type="Control" parent="."]
@@ -39,5 +47,8 @@ offset_top = 378.839
 offset_right = -329.014
 offset_bottom = 446.839
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Timer pop" type="Timer" parent="Control"]
+wait_time = 5.0
 
 [connection signal="button_down" from="Control/Button" to="Control" method="_on_button_button_down"]
