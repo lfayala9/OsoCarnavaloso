@@ -25,7 +25,7 @@ extends Node2D  # O el nodo principal del mapa
 #func _on_pin_pressed(index):
 	#print("Pin " + str(index) + " fue presionado sí")
 	#pass
-var pin_positions = [Vector2(250, 200), Vector2(300, 250), Vector2(500, 100)]  
+var pin_positions = [Vector2(250, 200), Vector2(500, 100), Vector2(125, 670), Vector2(460, 692), Vector2(513, 482), Vector2(847, 516), Vector2(732, 246)]  
 var active_pins = {}  # Diccionario para rastrear posiciones ocupadas
 
 @onready var timer = $Timer_pop
@@ -72,3 +72,6 @@ func _remove_pin(position):
 func _on_task_bar_remove_bar(position):
 	_remove_pin(position)
 	pass # Replace with function body.
+func _input(event):
+	if event is InputEventMouseButton and event.pressed:
+		print("Click en posición:", event.position)
