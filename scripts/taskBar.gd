@@ -26,7 +26,7 @@ var counter = 10;
 
 
 func _ready():
-	points[1].x = 200  # Inicializar la barra en tamaño máximo
+	points[1].x = 40  # Inicializar la barra en tamaño máximo
 	task_timer.start()  # Iniciar el Timer al crearse
 
 func _decrease():
