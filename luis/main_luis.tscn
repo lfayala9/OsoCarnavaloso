@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://e3em8l16sabp"]
+[gd_scene load_steps=8 format=3 uid="uid://6aunjai2qx33"]
 
 [ext_resource type="Script" path="res://scripts/spawn_pins.gd" id="1_fkdds"]
 [ext_resource type="Texture2D" uid="uid://dotfyf8ltngul" path="res://assets/oso.png" id="2_kyw2s"]
