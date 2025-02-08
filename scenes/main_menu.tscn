@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cd8jy4mxwmhfr"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhg7eicj6hq" path="res://assets/madro.jpg" id="1_072qi"]
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_efmue"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_efmue"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,11 +15,11 @@ script = ExtResource("1_efmue")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 99
 layout_mode = 0
-offset_left = 88.0
-offset_top = 264.0
-offset_right = 308.0
-offset_bottom = 523.0
-scale = Vector2(1.88158, 2.50199)
+offset_left = 92.0
+offset_top = 199.0
+offset_right = 249.0
+offset_bottom = 300.0
+scale = Vector2(1.58958, 2.19152)
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -34,8 +34,8 @@ layout_mode = 2
 text = "QUIT"
 
 [node name="Madro" type="Sprite2D" parent="."]
-position = Vector2(960, 541)
-scale = Vector2(1.9162, 1.0824)
+position = Vector2(717.95, 507.4)
+scale = Vector2(1.4281, 1.0132)
 texture = ExtResource("1_072qi")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
