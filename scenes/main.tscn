@@ -1,130 +1,140 @@
 [gd_scene load_steps=8 format=3 uid="uid://cjdqvinex6imh"]
 
 [ext_resource type="Script" path="res://scripts/spawn_pins.gd" id="1_r22rf"]
-[ext_resource type="Texture2D" uid="uid://dotfyf8ltngul" path="res://assets/oso.png" id="2_qw0xo"]
 [ext_resource type="Script" path="res://scripts/example.gd" id="3_grfu2"]
 [ext_resource type="Script" path="res://scripts/Timer_pop.gd" id="5_qkam1"]
 [ext_resource type="Texture2D" uid="uid://bpalvaw6w0hqd" path="res://assets/Google_Maps_pin.svg (1).png" id="5_wf58w"]
 [ext_resource type="Script" path="res://scripts/taskBar.gd" id="7_2qqpg"]
+[ext_resource type="Texture2D" uid="uid://ba7newha8sv3p" path="res://assets/placeholder.png" id="7_gbud1"]
 [ext_resource type="Script" path="res://scripts/stressBar.gd" id="7_xr5eb"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_r22rf")
 metadata/_edit_vertical_guides_ = [2435.0, 2337.0, 1063.0]
 
-[node name="Oso" type="Sprite2D" parent="."]
-position = Vector2(959.465, 627.914)
-scale = Vector2(1.65544, 1.46066)
-texture = ExtResource("2_qw0xo")
-
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 808.0
-offset_top = 103.0
-offset_right = 987.0
-offset_bottom = 142.0
+offset_left = 815.0
+offset_top = 100.0
+offset_right = 994.0
+offset_bottom = 139.0
 script = ExtResource("3_grfu2")
 
 [node name="Bebida_Button" type="Button" parent="Control"]
+z_index = 1
 layout_mode = 0
-offset_left = 496.0
-offset_top = 26.0
-offset_right = 874.0
-offset_bottom = 123.0
+offset_left = 255.0
+offset_top = 56.0
+offset_right = 633.0
+offset_bottom = 153.0
 theme_override_font_sizes/font_size = 40
 text = "Asignar"
+flat = true
 
-[node name="Bebida_Label" type="Label" parent="Control"]
+[node name="Bebida_Label" type="Label" parent="Control/Bebida_Button"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
 anchor_top = -0.201
 anchor_right = -0.134
 anchor_bottom = -0.201
-offset_left = 576.986
-offset_top = 40.839
-offset_right = 849.986
-offset_bottom = 130.839
+offset_left = 107.652
+offset_top = 26.497
+offset_right = 380.652
+offset_bottom = 116.497
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Bebidas: 100%"
 horizontal_alignment = 1
 
 [node name="Comida_Button" type="Button" parent="Control"]
+z_index = 1
 layout_mode = 0
-offset_left = 499.0
-offset_top = 163.0
-offset_right = 877.0
-offset_bottom = 260.0
+offset_left = 257.0
+offset_top = 183.0
+offset_right = 635.0
+offset_bottom = 280.0
 theme_override_font_sizes/font_size = 40
 text = "Asignar"
+flat = true
 
-[node name="Comida_Label" type="Label" parent="Control"]
+[node name="Comida_Label" type="Label" parent="Control/Comida_Button"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
 anchor_top = -0.201
 anchor_right = -0.134
 anchor_bottom = -0.201
-offset_left = 579.986
-offset_top = 177.839
-offset_right = 852.986
-offset_bottom = 267.839
+offset_left = 107.652
+offset_top = 26.497
+offset_right = 380.652
+offset_bottom = 116.497
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Comida: 100%"
 horizontal_alignment = 1
 
 [node name="Musica_Button" type="Button" parent="Control"]
+z_index = 1
 layout_mode = 0
-offset_left = 505.0
-offset_top = 311.0
-offset_right = 883.0
-offset_bottom = 408.0
+offset_left = 259.0
+offset_top = 315.0
+offset_right = 637.0
+offset_bottom = 412.0
 theme_override_font_sizes/font_size = 40
 text = "Asignar"
+flat = true
 
-[node name="Musica_Label" type="Label" parent="Control"]
+[node name="Musica_Label" type="Label" parent="Control/Musica_Button"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
 anchor_top = -0.201
 anchor_right = -0.134
 anchor_bottom = -0.201
-offset_left = 585.986
-offset_top = 325.839
-offset_right = 858.986
-offset_bottom = 415.839
+offset_left = 107.652
+offset_top = 26.497
+offset_right = 380.652
+offset_bottom = 116.497
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Música: 100%"
 horizontal_alignment = 1
 
 [node name="Juegos_Button" type="Button" parent="Control"]
+z_index = 1
 layout_mode = 0
-offset_left = 494.0
-offset_top = 735.0
-offset_right = 872.0
-offset_bottom = 832.0
+offset_left = 259.0
+offset_top = 444.0
+offset_right = 637.0
+offset_bottom = 541.0
 theme_override_font_sizes/font_size = 40
 text = "Asignar"
+flat = true
 
-[node name="Juegos_Label" type="Label" parent="Control"]
+[node name="Juegos_Label" type="Label" parent="Control/Juegos_Button"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
 anchor_top = -0.201
 anchor_right = -0.134
 anchor_bottom = -0.201
-offset_left = 574.986
-offset_top = 749.839
-offset_right = 847.986
-offset_bottom = 839.839
+offset_left = 103.652
+offset_top = 20.497
+offset_right = 376.652
+offset_bottom = 110.497
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Juegos: 100%"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 20.0
+offset_right = 636.0
+offset_bottom = 590.0
 
 [node name="Timer_pop" type="Timer" parent="."]
 wait_time = 2.0
@@ -132,10 +142,12 @@ autostart = true
 script = ExtResource("5_qkam1")
 
 [node name="pin" type="Button" parent="."]
-offset_left = 485.0
-offset_top = 187.0
-offset_right = 1693.0
-offset_bottom = 2289.0
+visible = false
+z_index = 1
+offset_left = 520.0
+offset_top = 239.0
+offset_right = 1728.0
+offset_bottom = 2341.0
 scale = Vector2(0.0417586, 0.0289102)
 icon = ExtResource("5_wf58w")
 flat = true
@@ -143,7 +155,7 @@ flat = true
 [node name="taskBar" type="Line2D" parent="pin"]
 position = Vector2(23.9471, 2317.52)
 scale = Vector2(5.71156, 6.16982)
-points = PackedVector2Array(0, 0, 200, 0, 0, 0, 0, 0)
+points = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 width = 40.0
 default_color = Color(1, 0.129412, 0.180392, 1)
 script = ExtResource("7_2qqpg")
@@ -152,11 +164,17 @@ script = ExtResource("7_2qqpg")
 autostart = true
 
 [node name="stressBar" type="Line2D" parent="."]
-position = Vector2(961, 735)
+z_index = 1
+position = Vector2(731, 925)
 points = PackedVector2Array(0, 0, 0, 0, 4, 0, 0, 0)
 width = 60.0
 default_color = Color(1, 0.156863, 0.0352941, 1)
 script = ExtResource("7_xr5eb")
+
+[node name="Placeholder" type="Sprite2D" parent="."]
+z_as_relative = false
+position = Vector2(722, 515)
+texture = ExtResource("7_gbud1")
 
 [connection signal="button_down" from="Control/Bebida_Button" to="Control" method="_on_button_button_down"]
 [connection signal="pressed" from="Control/Bebida_Button" to="Control" method="_on_bebida_button_pressed"]
@@ -167,4 +185,5 @@ script = ExtResource("7_xr5eb")
 [connection signal="button_down" from="Control/Juegos_Button" to="Control" method="_on_button_button_down"]
 [connection signal="pressed" from="Control/Juegos_Button" to="Control" method="_on_juegos_button_pressed"]
 [connection signal="no_time" from="pin/taskBar" to="stressBar" method="_on_task_bar_no_time"]
+[connection signal="remove_bar" from="pin/taskBar" to="." method="_on_task_bar_remove_bar"]
 [connection signal="timeout" from="pin/taskBar/taskTimer" to="pin/taskBar" method="_on_task_timer_timeout"]
