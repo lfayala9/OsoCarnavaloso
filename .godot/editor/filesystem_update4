@@ -1,5 +1,4 @@
-res://scripts/example.gd
 res://scenes/main.tscn
-res://scripts/Timer_pop_up.gd
-res://scenes/Timer_pop.gd
+res://scripts/buttons.gd
 res://scenes/spawn_pins.gd
+res://scenes/Timer_pop.gd

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/spawn_pins.gd" id="1_r22rf"]
 [ext_resource type="Texture2D" uid="uid://dotfyf8ltngul" path="res://assets/oso.png" id="2_qw0xo"]
-[ext_resource type="Script" path="res://scripts/example.gd" id="3_grfu2"]
+[ext_resource type="Script" path="res://scripts/buttons.gd" id="3_grfu2"]
 [ext_resource type="Script" path="res://scenes/Timer_pop.gd" id="5_qkam1"]
 
 [node name="Node2D" type="Node2D"]
@@ -22,7 +22,7 @@ offset_right = 987.0
 offset_bottom = 142.0
 script = ExtResource("3_grfu2")
 
-[node name="Bebida_Button" type="Button" parent="Control"]
+[node name="Drink_Button" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = -22.0
 offset_top = -14.0
@@ -30,7 +30,7 @@ offset_right = 208.0
 offset_bottom = 53.0
 text = "Asignar"
 
-[node name="Bebida_Label" type="Label" parent="Control"]
+[node name="Drink_Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
@@ -45,7 +45,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Bebida: 100%"
 horizontal_alignment = 1
 
-[node name="Comida_Button" type="Button" parent="Control"]
+[node name="Food_Button" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = -17.0
 offset_top = 78.0
@@ -53,7 +53,7 @@ offset_right = 202.0
 offset_bottom = 149.0
 text = "Asignar"
 
-[node name="Comida_Label" type="Label" parent="Control"]
+[node name="Food_Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
@@ -68,7 +68,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Comida: 100%"
 horizontal_alignment = 1
 
-[node name="Juegos_Button" type="Button" parent="Control"]
+[node name="Games_Button" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = -11.0
 offset_top = 179.0
@@ -76,7 +76,7 @@ offset_right = 205.0
 offset_bottom = 255.0
 text = "Asignar"
 
-[node name="Juegos_Label" type="Label" parent="Control"]
+[node name="Games_Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
@@ -91,14 +91,39 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Juegos: 100%"
 horizontal_alignment = 1
 
+[node name="Music_Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -19.0
+offset_top = 469.0
+offset_right = 197.0
+offset_bottom = 545.0
+text = "Asignar"
+
+[node name="Music_Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.134
+anchor_top = -0.201
+anchor_right = -0.134
+anchor_bottom = -0.201
+offset_left = 7.986
+offset_top = 478.839
+offset_right = 232.986
+offset_bottom = 546.839
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Música: 100%"
+horizontal_alignment = 1
+
 [node name="Timer_pop" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 script = ExtResource("5_qkam1")
 
-[connection signal="button_down" from="Control/Bebida_Button" to="Control" method="_on_button_button_down"]
-[connection signal="pressed" from="Control/Bebida_Button" to="Control" method="_on_bebida_button_pressed"]
-[connection signal="button_down" from="Control/Comida_Button" to="Control" method="_on_button_button_down"]
-[connection signal="pressed" from="Control/Comida_Button" to="Control" method="_on_comida_button_pressed"]
-[connection signal="button_down" from="Control/Juegos_Button" to="Control" method="_on_button_button_down"]
-[connection signal="pressed" from="Control/Juegos_Button" to="Control" method="_on_juegos_button_pressed"]
+[connection signal="button_down" from="Control/Drink_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Drink_Button" to="Control" method="_on_bebida_button_pressed"]
+[connection signal="button_down" from="Control/Food_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Food_Button" to="Control" method="_on_comida_button_pressed"]
+[connection signal="button_down" from="Control/Games_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Games_Button" to="Control" method="_on_juegos_button_pressed"]
+[connection signal="button_down" from="Control/Music_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Music_Button" to="Control" method="_on_music_button_pressed"]
