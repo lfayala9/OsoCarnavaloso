@@ -1,16 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjdqvinex6imh"]
+[gd_scene load_steps=8 format=3 uid="uid://cjdqvinex6imh"]
 
-[ext_resource type="Script" path="res://scenes/spawn_pins.gd" id="1_r22rf"]
+[ext_resource type="Script" path="res://scripts/spawn_pins.gd" id="1_r22rf"]
 [ext_resource type="Texture2D" uid="uid://dotfyf8ltngul" path="res://assets/oso.png" id="2_qw0xo"]
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://scripts/buttons.gd" id="3_grfu2"]
 [ext_resource type="Script" path="res://scenes/Timer_pop.gd" id="5_qkam1"]
+=======
+[ext_resource type="Script" path="res://scripts/example.gd" id="3_grfu2"]
+[ext_resource type="Script" path="res://scripts/Timer_pop.gd" id="5_qkam1"]
+[ext_resource type="Texture2D" uid="uid://bpalvaw6w0hqd" path="res://assets/Google_Maps_pin.svg (1).png" id="5_wf58w"]
+[ext_resource type="Script" path="res://scripts/taskBar.gd" id="7_2qqpg"]
+[ext_resource type="Script" path="res://scripts/stressBar.gd" id="7_xr5eb"]
+>>>>>>> main
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_r22rf")
-metadata/_edit_vertical_guides_ = [2435.0, 2337.0]
+metadata/_edit_vertical_guides_ = [2435.0, 2337.0, 1063.0]
 
 [node name="Oso" type="Sprite2D" parent="."]
-position = Vector2(579, 429)
+position = Vector2(959.465, 627.914)
+scale = Vector2(1.65544, 1.46066)
 texture = ExtResource("2_qw0xo")
 
 [node name="Control" type="Control" parent="."]
@@ -24,11 +33,19 @@ script = ExtResource("3_grfu2")
 
 [node name="Drink_Button" type="Button" parent="Control"]
 layout_mode = 0
+<<<<<<< HEAD
 offset_left = -22.0
 offset_top = -14.0
 offset_right = 208.0
 offset_bottom = 53.0
 text = "Asignar"
+=======
+offset_left = 507.0
+offset_top = 25.0
+offset_right = 864.0
+offset_bottom = 114.0
+text = "recurso 1"
+>>>>>>> main
 
 [node name="Drink_Label" type="Label" parent="Control"]
 layout_mode = 1
@@ -119,6 +136,7 @@ wait_time = 2.0
 autostart = true
 script = ExtResource("5_qkam1")
 
+<<<<<<< HEAD
 [connection signal="button_down" from="Control/Drink_Button" to="Control" method="_on_button_button_down"]
 [connection signal="pressed" from="Control/Drink_Button" to="Control" method="_on_bebida_button_pressed"]
 [connection signal="button_down" from="Control/Food_Button" to="Control" method="_on_button_button_down"]
@@ -127,3 +145,35 @@ script = ExtResource("5_qkam1")
 [connection signal="pressed" from="Control/Games_Button" to="Control" method="_on_juegos_button_pressed"]
 [connection signal="button_down" from="Control/Music_Button" to="Control" method="_on_button_button_down"]
 [connection signal="pressed" from="Control/Music_Button" to="Control" method="_on_music_button_pressed"]
+=======
+[node name="pin" type="Button" parent="."]
+offset_left = 485.0
+offset_top = 187.0
+offset_right = 1693.0
+offset_bottom = 2289.0
+scale = Vector2(0.0417586, 0.0289102)
+icon = ExtResource("5_wf58w")
+flat = true
+
+[node name="taskBar" type="Line2D" parent="pin"]
+position = Vector2(23.9471, 2317.52)
+scale = Vector2(5.71156, 6.16982)
+points = PackedVector2Array(0, 0, 200, 0, 0, 0, 0, 0)
+width = 40.0
+default_color = Color(1, 0.129412, 0.180392, 1)
+script = ExtResource("7_2qqpg")
+
+[node name="taskTimer" type="Timer" parent="pin/taskBar"]
+autostart = true
+
+[node name="stressBar" type="Line2D" parent="."]
+position = Vector2(961, 735)
+points = PackedVector2Array(0, 0, 0, 0, 4, 0, 0, 0)
+width = 60.0
+default_color = Color(1, 0.156863, 0.0352941, 1)
+script = ExtResource("7_xr5eb")
+
+[connection signal="button_down" from="Control/Button" to="Control" method="_on_button_button_down"]
+[connection signal="no_time" from="pin/taskBar" to="stressBar" method="_on_task_bar_no_time"]
+[connection signal="timeout" from="pin/taskBar/taskTimer" to="pin/taskBar" method="_on_task_timer_timeout"]
+>>>>>>> main

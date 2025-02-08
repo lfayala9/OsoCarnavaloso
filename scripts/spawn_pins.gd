@@ -1,7 +1,11 @@
 extends Node2D  
 
+<<<<<<< HEAD:scenes/spawn_pins.gd
 var pin_texture = preload("res://assets/pop_up.png")
 #var pin_positions = [Vector2(250, 200), Vector2(300, 250), Vector2(500, 100)]  
+=======
+var pin_positions = [Vector2(250, 200), Vector2(300, 250), Vector2(500, 100)]  # Lista de posiciones
+>>>>>>> main:scripts/spawn_pins.gd
 var current_index = 0
 var pin_positions = [
 	Vector2(250, 200),
@@ -38,6 +42,7 @@ func _ready():
 	timer.timeout.connect(_spawn_pin)  
 
 func _spawn_pin():
+<<<<<<< HEAD:scenes/spawn_pins.gd
 	# Select a random position from the array.
 	var pos_index = randi() % pin_positions.size()
 	var spawn_position = pin_positions[pos_index]
@@ -67,6 +72,17 @@ func _on_pin_pressed(pin):
 	var resource_manager = get_node("Control")
 	resource_manager.set_active_pin(pin)
 	#_spawn_pin()
+=======
+	if current_index < pin_positions.size():
+		var pin = $pin;
+		pin.position = pin_positions[0]
+		pin.pressed.connect(_on_pin_pressed.bind(current_index))  # Conectar evento clic
+		
+		#add_child(pin)
+		current_index += 1
+	else:
+		timer.stop()
+>>>>>>> main:scripts/spawn_pins.gd
 
 #FUNCTIONAL SPAWN_PIN
 #func _spawn_pin():

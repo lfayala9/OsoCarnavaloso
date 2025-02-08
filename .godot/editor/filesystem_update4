@@ -1,4 +1,14 @@
 res://scenes/main.tscn
+<<<<<<< HEAD
 res://scripts/buttons.gd
 res://scenes/spawn_pins.gd
 res://scenes/Timer_pop.gd
+=======
+res://scenes/spawn_pins.gd
+res://scenes/pin.gd
+res://scenes/taskBar.gd
+res://scenes/stressBar.gd
+res://scenes/main_menu.tscn
+res://scenes/main_menu.gd
+res://scripts/spawn_pins.gd
+>>>>>>> main
