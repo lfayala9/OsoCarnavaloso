@@ -26,26 +26,105 @@ offset_right = 987.0
 offset_bottom = 142.0
 script = ExtResource("3_grfu2")
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Bebida_Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 507.0
-offset_top = 25.0
-offset_right = 864.0
-offset_bottom = 114.0
-text = "recurso 1"
+offset_left = 496.0
+offset_top = 26.0
+offset_right = 874.0
+offset_bottom = 123.0
+theme_override_font_sizes/font_size = 40
+text = "Asignar"
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Bebida_Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.134
 anchor_top = -0.201
 anchor_right = -0.134
 anchor_bottom = -0.201
-offset_left = -554.014
-offset_top = 378.839
-offset_right = -329.014
-offset_bottom = 446.839
+offset_left = 576.986
+offset_top = 40.839
+offset_right = 849.986
+offset_bottom = 130.839
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Bebidas: 100%"
+horizontal_alignment = 1
+
+[node name="Comida_Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 163.0
+offset_right = 877.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 40
+text = "Asignar"
+
+[node name="Comida_Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.134
+anchor_top = -0.201
+anchor_right = -0.134
+anchor_bottom = -0.201
+offset_left = 579.986
+offset_top = 177.839
+offset_right = 852.986
+offset_bottom = 267.839
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Comida: 100%"
+horizontal_alignment = 1
+
+[node name="Musica_Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 311.0
+offset_right = 883.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 40
+text = "Asignar"
+
+[node name="Musica_Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.134
+anchor_top = -0.201
+anchor_right = -0.134
+anchor_bottom = -0.201
+offset_left = 585.986
+offset_top = 325.839
+offset_right = 858.986
+offset_bottom = 415.839
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Música: 100%"
+horizontal_alignment = 1
+
+[node name="Juegos_Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 735.0
+offset_right = 872.0
+offset_bottom = 832.0
+theme_override_font_sizes/font_size = 40
+text = "Asignar"
+
+[node name="Juegos_Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.134
+anchor_top = -0.201
+anchor_right = -0.134
+anchor_bottom = -0.201
+offset_left = 574.986
+offset_top = 749.839
+offset_right = 847.986
+offset_bottom = 839.839
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Juegos: 100%"
+horizontal_alignment = 1
 
 [node name="Timer_pop" type="Timer" parent="."]
 wait_time = 2.0
@@ -79,6 +158,13 @@ width = 60.0
 default_color = Color(1, 0.156863, 0.0352941, 1)
 script = ExtResource("7_xr5eb")
 
-[connection signal="button_down" from="Control/Button" to="Control" method="_on_button_button_down"]
+[connection signal="button_down" from="Control/Bebida_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Bebida_Button" to="Control" method="_on_bebida_button_pressed"]
+[connection signal="button_down" from="Control/Comida_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Comida_Button" to="Control" method="_on_comida_button_pressed"]
+[connection signal="button_down" from="Control/Musica_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Musica_Button" to="Control" method="_on_musica_button_pressed"]
+[connection signal="button_down" from="Control/Juegos_Button" to="Control" method="_on_button_button_down"]
+[connection signal="pressed" from="Control/Juegos_Button" to="Control" method="_on_juegos_button_pressed"]
 [connection signal="no_time" from="pin/taskBar" to="stressBar" method="_on_task_bar_no_time"]
 [connection signal="timeout" from="pin/taskBar/taskTimer" to="pin/taskBar" method="_on_task_timer_timeout"]
