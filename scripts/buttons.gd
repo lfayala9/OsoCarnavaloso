@@ -92,7 +92,7 @@ func process_resource_usage(resource: String, amount: int):
 					print("⚠️ Incorrecto! Este pin necesitaba " + expected_resource + ", pero usaste " + resource + ".")
 			else:
 				print("⚠️ ERROR: El pin seleccionado no tiene un recurso esperado asignado.")
-			active_pin.queue_free()
+			#active_pin.queue_free()
 			active_pin = null
 	else:
 		print("⚠️ ERROR: No seleccionaste ningún pin!")
