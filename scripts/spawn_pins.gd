@@ -13,6 +13,7 @@ func _ready():
 	timer.wait_time = randf_range(1, 3)  
 	timer.start()
 	timer.timeout.connect(_spawn_pin)
+	
 func _spawn_pin():
 	# Obtener posiciones disponibles (donde no hay un pin actualmente)
 	var available_positions = pin_positions.filter(func(pos): return !active_pins.has(pos))

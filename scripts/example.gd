@@ -13,6 +13,11 @@ var active_pin = null  # Almacena el pin seleccionado
 @onready var games_label =  $gamesButton/gamesLabel
 @onready var music_label =  $musicButton/musicLabel
 
+
+@onready var sprite = $Sprite2D  # Referencia al sprite en la escena
+@onready var control_node = $Control  # Referencia al nodo Control
+var message_timer : Timer  # Temporizador para el mensaje
+
 func _ready():
 	update_label()
 
@@ -103,6 +108,10 @@ func update_label():
 	food_label.text = "Comida: " + str(food_value)
 	games_label.text = "Juegos: " + str(games_value)
 	music_label.text = "Música: " + str(music_value)
+
+func twistter():
+	pass
+	
 
 # ✅ Botones para usar recursos
 
