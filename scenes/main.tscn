@@ -30,6 +30,7 @@ offset_right = 595.0
 offset_bottom = 146.0
 
 [node name="musicLabel" type="Label" parent="Control/musicButton"]
+layout_mode = 0
 offset_left = 31.0
 offset_right = 307.0
 offset_bottom = 83.0
@@ -60,6 +61,7 @@ offset_right = 601.0
 offset_bottom = 277.0
 
 [node name="drinksLabel" type="Label" parent="Control/drinksButton"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 1.0
 offset_right = 307.0
@@ -74,6 +76,7 @@ offset_right = 589.0
 offset_bottom = 534.0
 
 [node name="gamesLabel" type="Label" parent="Control/gamesButton"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 11.0
 offset_right = 318.0
