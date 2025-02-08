@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/spawn_pins.gd" id="1_r22rf"]
 [ext_resource type="Texture2D" uid="uid://dotfyf8ltngul" path="res://assets/oso.png" id="2_qw0xo"]
-[ext_resource type="Script" path="res://scripts/example.gd" id="3_grfu2"]
+[ext_resource type="Script" path="res://scripts/buttons.gd" id="3_grfu2"]
 [ext_resource type="Script" path="res://scripts/Timer_pop.gd" id="5_qkam1"]
 [ext_resource type="Texture2D" uid="uid://bpalvaw6w0hqd" path="res://assets/Google_Maps_pin.svg (1).png" id="5_wf58w"]
 [ext_resource type="Script" path="res://scripts/taskBar.gd" id="7_2qqpg"]
